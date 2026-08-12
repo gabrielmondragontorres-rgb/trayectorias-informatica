@@ -152,6 +152,42 @@ else           { Escribir "  Comando instalado en tu perfil." "Green" }
 Escribir "  $perfil" "DarkGray"
 Escribir ""
 
+# --- 2.5 Politica de ejecucion -----------------------------------------------
+# El perfil de PowerShell es un archivo .ps1. Con la politica "Restricted",
+# que es la que Windows trae de fabrica, no se carga: el comando quedaria
+# instalado pero invisible al abrir una terminal nueva. Esta linea de
+# instalacion (irm | iex) si funciona con Restricted, porque no ejecuta
+# ningun archivo; por eso el problema no aparece hasta la terminal siguiente.
+$politica = Get-ExecutionPolicy
+if ($politica -in @("Restricted", "AllSigned")) {
+    Escribir "  Falta un permiso de Windows" "Yellow"
+    Escribir "  Windows todavia no permite cargar tu perfil de PowerShell," "DarkGray"
+    Escribir "  asi que el comando no apareceria en una terminal nueva." "DarkGray"
+    Escribir "  Se corrige solo para tu usuario, sin permisos de administrador." "DarkGray"
+    Escribir ""
+
+    $r = ""
+    try { $r = Read-Host "  Aplicarlo ahora? (s/n)" }
+    catch { Escribir "  Sin confirmacion posible." "DarkGray" }
+
+    if ($r -eq 's' -or $r -eq 'S') {
+        try { Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser -Force } catch {}
+
+        # Si la politica la fija una directiva de grupo, el cambio de usuario
+        # no surte efecto y Set-ExecutionPolicy no siempre falla. Se comprueba.
+        if ((Get-ExecutionPolicy) -in @("Restricted", "AllSigned")) {
+            Escribir "  No se pudo cambiar: la politica la fija tu institucion." "Red"
+            Escribir "  Pide a soporte que habilite RemoteSigned para tu usuario." "DarkGray"
+        } else {
+            Escribir "  Permiso aplicado." "Green"
+        }
+    } else {
+        Escribir "  Sin ese permiso el comando no cargara. Para aplicarlo despues:" "Yellow"
+        Escribir "      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser" "White"
+    }
+    Escribir ""
+}
+
 # --- 3. Cierre ---------------------------------------------------------------
 if ($faltantes.Count -gt 0) {
     Escribir "  ATENCION: falta instalar $($faltantes -join ' y ')." "Yellow"
