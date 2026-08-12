@@ -148,5 +148,15 @@ cuando se agreguen mejoras: basta con crear un proyecto nuevo.
 
 ---
 
+## Licencia
+
+Licencia MIT. En términos llanos: **puedes usar, copiar, modificar y compartir
+este material con libertad**, incluso adaptándolo a otra materia o a otro
+plantel. La única condición es conservar el aviso de autoría.
+
+Consulta el archivo [LICENSE](LICENSE).
+
+---
+
 *Trayectorias Informática · Colegio de Bachilleres · Agosto de 2026*
 *Basado en SaaS Factory.*
