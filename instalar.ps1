@@ -37,6 +37,9 @@ function Revisar($nombre, $comando, $ayuda) {
     if ($existe) {
         $version = ""
         try { $version = (& $comando --version 2>$null | Select-Object -First 1) } catch {}
+        # Algunos ejecutables dejan LASTEXITCODE en -1 al redirigir stderr en
+        # PowerShell 5.1. Se reinicia para no aparentar un fallo en el prompt.
+        $global:LASTEXITCODE = 0
         Escribir "    [OK]    $nombre $version" "Green"
         return $true
     } else {
@@ -160,3 +163,7 @@ Escribir "      trayectorias" "White"
 Escribir ""
 Escribir "  (tambien funciona como: trayectorias-informatica  o  ti)" "DarkGray"
 Escribir ""
+
+# Salir limpio: los ejecutables consultados arriba pueden dejar un codigo
+# distinto de cero, y algunos prompts lo muestran como si hubiera fallado.
+$global:LASTEXITCODE = 0
