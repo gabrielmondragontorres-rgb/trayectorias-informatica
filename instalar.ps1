@@ -76,7 +76,11 @@ function trayectorias {
         Write-Host "  Esta carpeta no esta vacia:" -ForegroundColor Yellow
         Write-Host "  `$destino" -ForegroundColor DarkGray
         Write-Host ""
-        `$r = Read-Host "  Los archivos con el mismo nombre se reemplazaran. Continuar? (s/n)"
+        # Si no hay terminal interactiva (script automatizado), Read-Host falla.
+        # En ese caso se cancela en silencio: nunca sobrescribir sin permiso.
+        `$r = ""
+        try { `$r = Read-Host "  Los archivos con el mismo nombre se reemplazaran. Continuar? (s/n)" }
+        catch { Write-Host "  Sin confirmacion posible. Usa -Forzar si estas seguro." -ForegroundColor DarkGray }
         if (`$r -ne 's' -and `$r -ne 'S') { Write-Host "  Cancelado." -ForegroundColor DarkGray; return }
     }
 
