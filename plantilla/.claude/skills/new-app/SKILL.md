@@ -170,13 +170,14 @@ src/features/
 - **MCPs:** Next.js DevTools + Playwright + Supabase
 
 ### Proximos Pasos
-1. [ ] Setup proyecto base
-2. [ ] Configurar Supabase
-3. [ ] Implementar Auth
-4. [ ] Feature: [feature-1]
-5. [ ] Feature: [feature-2]
-6. [ ] Testing E2E
-7. [ ] Deploy Vercel
+1. [ ] Poner el nombre del negocio en src/config/sitio.ts
+2. [ ] Setup proyecto base
+3. [ ] Configurar Supabase
+4. [ ] Implementar Auth
+5. [ ] Feature: [feature-1]
+6. [ ] Feature: [feature-2]
+7. [ ] Testing E2E
+8. [ ] Deploy Vercel
 ```
 
 ---
@@ -188,5 +189,8 @@ src/features/
 - **No asumas:** Valida cada suposicion con el usuario
 - **Traduce a tecnico:** El BUSINESS_LOGIC.md es para que TU (el agente) puedas ejecutar despues
 - **Auth default:** Siempre Email/Password (evita OAuth para testing)
+- **El nombre primero:** En cuanto sepas como se llama el negocio, escribelo en
+  `src/config/sitio.ts`. Es lo que aparece en la pestana del navegador y en los
+  buscadores. Si se queda sin poner, el sitio se llamara "Mi proyecto"
 
 *"Primero entiende el negocio. Despues escribe codigo."*

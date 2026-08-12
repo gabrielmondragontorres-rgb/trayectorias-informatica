@@ -126,6 +126,16 @@ La persona dice algo
 - Si el formulario recoge datos de estudiantes, avisar que aplica la normativa de
   protección de datos personales.
 
+### Identidad del sitio
+
+- **En cuanto sepas el nombre del negocio, actualiza `src/config/sitio.ts`.** Ahí
+  viven el nombre y la descripción que se ven en la pestaña del navegador, en los
+  buscadores y al compartir el enlace. Si no lo haces, el sitio de esa persona se
+  llamará «Mi proyecto» delante de su clientela.
+- No hace falta tocar nada más: `layout.tsx` y la página de inicio los toman de ahí.
+- Actualiza también el campo `name` de `package.json` con el nombre en minúsculas
+  y con guiones (por ejemplo, `reposteria-luna`).
+
 ### Lenguaje
 
 - **SIEMPRE usar lenguaje incluyente y no sexista** en todo texto visible del sitio
