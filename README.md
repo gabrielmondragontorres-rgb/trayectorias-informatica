@@ -31,7 +31,16 @@ irm https://raw.githubusercontent.com/gabrielmondragontorres-rgb/trayectorias-in
 
 El instalador revisa lo que necesitas y deja listo el comando `trayectorias`.
 
+> **Puede pedirte un permiso.** Si avisa que falta un permiso de Windows y pregunta
+> si aplicarlo, responde `s`. Windows no permite cargar el comando hasta que se
+> concede. El cambio se aplica solo a tu usuario, no toca el resto de la
+> computadora y no necesita administrador.
+
 **Cierra esa ventana y abre una nueva** para que el comando quede disponible.
+
+Instálalo desde la misma terminal en la que vayas a trabajar después. Windows
+PowerShell y PowerShell 7 guardan sus ajustes por separado y no se comparten el
+comando.
 
 ---
 
@@ -138,6 +147,18 @@ activará la seguridad correspondiente en la base de datos; no la desactives.
 1. Cierra la terminal y abre una nueva.
 2. Vuelve a ejecutar la línea de instalación: reinstala sin duplicar nada.
 3. Descríbele el problema a tu asistente en español. Para eso está.
+
+**Si escribes `trayectorias` y te responde que no reconoce el comando**, casi
+siempre es una de dos cosas, y se distinguen así:
+
+- **Instalaste en una terminal y estás trabajando en otra.** Windows PowerShell —la
+  que trae Windows— y PowerShell 7 son programas distintos y no se comparten el
+  comando. Vuelve a ejecutar la línea de instalación desde la terminal que uses.
+- **Windows todavía no tiene permiso para cargarlo.** Ejecuta la línea de
+  instalación otra vez y responde `s` cuando pregunte por el permiso. Si en vez de
+  eso te dice que la política la fija tu institución, no es algo que puedas
+  cambiar tú: pide a soporte técnico del plantel que habilite `RemoteSigned` para
+  tu usuario.
 
 ---
 
