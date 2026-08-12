@@ -1,11 +1,11 @@
-﻿# =============================================================================
-#  Trayectorias Informática — Instalador
-#  Colegio de Bachilleres · Curso de Marketing Digital
+# =============================================================================
+#  Trayectorias Informatica - Instalador
+#  Colegio de Bachilleres - Curso de Marketing Digital
 #
 #  Uso:
 #    irm https://raw.githubusercontent.com/gabrielmondragontorres-rgb/trayectorias-informatica/main/instalar.ps1 | iex
 #
-#  Qué hace:
+#  Que hace:
 #    1. Comprueba los programas necesarios
 #    2. Instala el comando "trayectorias" en tu perfil de PowerShell
 #    3. Deja todo listo para crear proyectos del curso
@@ -121,7 +121,11 @@ function trayectorias {
 
 # Nombres alternativos del mismo comando
 function trayectorias-informatica { trayectorias @args }
-function Trayectorias-informática { trayectorias @args }
+# Variante con acento: se construye en ejecucion para que este archivo
+# sea ASCII puro y funcione igual descargado que ejecutado en linea.
+`$nombreAcentuado = "Trayectorias-inform" + [char]0xE1 + "tica"
+Set-Item -Path "function:global:`$nombreAcentuado" ``
+         -Value `${function:trayectorias} -Force -ErrorAction SilentlyContinue
 Set-Alias -Name ti -Value trayectorias -Scope Global -ErrorAction SilentlyContinue
 $FIN
 "@
