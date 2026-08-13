@@ -1,5 +1,10 @@
-import { createServerClient } from '@supabase/ssr'
+import { createServerClient, type CookieOptions } from '@supabase/ssr'
 import { cookies } from 'next/headers'
+
+// El tipo de las cookies se declara a mano porque la opcion que recibe
+// createServerClient es una union de dos formas posibles, y TypeScript no
+// deduce los parametros a traves de una union. Sin esto, npm run build falla.
+type CookieAGuardar = { name: string; value: string; options: CookieOptions }
 
 export async function createClient() {
   const cookieStore = await cookies()
@@ -12,7 +17,7 @@ export async function createClient() {
         getAll() {
           return cookieStore.getAll()
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: CookieAGuardar[]) {
           try {
             cookiesToSet.forEach(({ name, value, options }) =>
               cookieStore.set(name, value, options)
