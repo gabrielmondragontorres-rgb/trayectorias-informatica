@@ -1,0 +1,63 @@
+{
+  "modelo": "uac",
+  "identificacion": {
+    "institucion": "Colegio de Bachilleres",
+    "docente": "Ana Granados",
+    "plantel": "03",
+    "curriculum": "Laboral",
+    "tob": "Gestión de información documental y digital",
+    "unidad": "Conservación de documentos",
+    "semestre": "Sexto",
+    "ciclo": "2026-A",
+    "horas_semestre": "32 horas",
+    "fecha": "26 de enero de 2026"
+  },
+  "cortes": [{
+    "numero": 1,
+    "nombre_corte": "Corte 1. Valora la importancia de la preservación y conservación documental",
+    "horas_corte": "12 horas",
+    "competencia_laboral": "Realiza la reparación de documentos con daños menores en una biblioteca o unidad de información, con base en el conocimiento de las políticas de preservación y conservación, así como de los tipos de daño.",
+    "proposito": "Al término de la Unidad de Aprendizaje Curricular Conservación de documentos, el estudiantado será capaz de realizar la reparación de documentos con daños menores en una biblioteca o unidad de información.",
+    "meta_corte": "Valorar la importancia de la preservación y conservación documental en bibliotecas o unidades de información, mediante la integración de conocimientos sobre políticas, medidas de seguridad y mantenimiento, así como factores de deterioro.",
+    "desarrollos": [
+      {"texto": "Identificar los conceptos y características de la preservación y conservación de documentos, mediante el análisis comparativo de definiciones, funciones y ejemplos contextualizados.",
+       "conocimiento": "Preservación de documentos: 1. Concepto. 2. Características. 3. Plan de conservación de materiales documentales.",
+       "desempeno": "", "producto": ""},
+      {"texto": "Analizar las causas del deterioro interno y externo de los documentos, mediante la exploración de materiales y la identificación de factores de riesgo.",
+       "conocimiento": "Deterioro interno: 1. Papel. 2. Tinta. 3. Encuadernación. Deterioro externo: 1. Factores químicos. 2. Biológicos. 3. Humanos. 4. Fisicoquímicos.",
+       "desempeno": "Explora los materiales documentales e identifica factores de riesgo, registrando los hallazgos con organización.",
+       "producto": "Diagnóstico Integral de Deterioro Documental que contenga: análisis del deterioro interno, análisis del externo, propuestas preventivas y correctivas, y reflexión final."}
+    ],
+    "transversalidad": {
+      "fundamental": [{"asignatura": "Conciencia histórica III. La realidad actual en perspectiva histórica",
+                       "vinculo": "9. Las y los estudiantes explican la trayectoria histórica de los medios de comunicación, sus intereses y alcances."}],
+      "hvyt": "Comunicación. Autoconocimiento. Conciencia social. Logro de metas.",
+      "sostenible": "Sistemas Socio-ecológicos"
+    },
+    "apertura": {
+      "actividades": [{"texto": "Encuadre del curso. Presentación de la UAC con apoyo de una PPT: propósito, relación con la Trayectoria Ocupacional Básica y competencia laboral a lograr. Acordar las normas de convivencia. Aplicar el cuestionario de preguntas abiertas «Reconociendo saberes previos sobre preservación y conservación documental». En plenaria, recuperar las respuestas del grupo.", "tiempo": "2 horas"}],
+      "recursos": "Pizarrón. Plumones. Presentación PPT. Hojas de colores. Pelota.",
+      "evaluacion": {"descripcion": "Cuestionario de preguntas abiertas resuelto de manera individual.", "tiempo": "30 min",
+        "filas": [["Cuestionario «Reconociendo saberes previos» resuelto", "Pertinencia de las respuestas. Claridad conceptual. Razonamiento inicial para proponer soluciones.", "Lista de cotejo", "0%"]]}
+    },
+    "desarrollo": {
+      "actividades": [
+        {"texto": "«Comprendiendo la importancia de conservar y preservar los documentos». Pregunta detonadora en plenaria y lluvia de ideas. Se construye de forma colectiva un mapa mental. En equipos se completa el cuadro comparativo «Diferencias entre preservación y conservación».", "tiempo": "2 horas"},
+        {"texto": "«Conociendo las políticas de preservación de documentos». El grupo se divide en dos: el equipo A revisa la infografía de políticas de colecciones; el equipo B examina el folleto de normas de manejo. Se forman equipos mixtos que elaboran una síntesis comparativa. Como actividad extraclase, visita a la biblioteca del plantel con guía de observación.", "tiempo": "4 horas"}],
+      "recursos": "Almarza, Y. y González, V. (2019). Conservación y preservación en soportes físicos y digitales. Inai-Universidad La Salle. Infografía. Folleto de normas. Guía de observación. Rotafolio. Proyector.",
+      "evaluacion": {"descripcion": "Elaboración en equipos del cuadro comparativo, de la síntesis comparativa y del diagnóstico breve.", "tiempo": "Integrado en las actividades",
+        "filas": [
+          ["Cuadro comparativo «Diferencias entre preservación y conservación»", "Establecer las diferencias entre ambos conceptos. Caracterizar cada proceso. Organización y redacción clara.", "Lista de cotejo", "0%"],
+          ["Diagnóstico breve de la biblioteca del plantel", "Reconocer medidas de seguridad y mantenimiento aplicables. Elaborar propuestas preventivas y correctivas pertinentes.", "Rúbrica", "0%"]]}
+    },
+    "cierre": {
+      "actividades": [{"texto": "«Deterioro documental». A partir de imágenes de deterioro se construye un marco conceptual común. Cada estudiante selecciona un tipo de deterioro interno y uno externo para investigarlos y desarrolla el Diagnóstico Integral de Deterioro Documental. En plenaria se comparten algunos diagnósticos.", "tiempo": "1 hora"}],
+      "recursos": "Imágenes de referencia. Pizarrón. Guía para la investigación. Acceso a la biblioteca del plantel.",
+      "evaluacion": {"descripcion": "Elaboración del Diagnóstico Integral de Deterioro Documental de manera individual.", "tiempo": "2 horas",
+        "filas": [["Diagnóstico Integral de Deterioro Documental", "Claridad conceptual sobre el deterioro. Identificación y análisis de causas. Riesgos y consecuencias para el acervo. Propuestas preventivas y correctivas. Reflexión final.", "Rúbrica analítica", "25%"]]},
+      "retroalimentacion": {"titulo": "«Torbellino de ideas»",
+        "actividades": "Plantear en plenaria: ¿qué aprendimos sobre el deterioro de los documentos, sus causas y las formas de prevenirlo? Registrar las ideas agrupadas por categorías y elaborar un Mapa de Aprendizaje con tres conceptos clave, dos habilidades desarrolladas y dos ejemplos reales de aplicación.",
+        "tiempo": "1 hora"}
+    }
+  }]
+}
